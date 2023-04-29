@@ -1,0 +1,25 @@
+INSERT INTO order_service.roles (ID, NAME, CREATED_AT, ENABLED) VALUES (1, 'ADMIN', now(), 1);
+INSERT INTO order_service.roles (ID, NAME, CREATED_AT, ENABLED) VALUES (2, 'USER', now(), 1);
+INSERT INTO order_service.users (ID, USERNAME, PASSWORD, CREATED_AT, ENABLED) VALUES (1, 'admin', '$2a$12$vBliEVgrLjH.XeS9eoK0y.lBOx86A5ewT41JH9.sYxTre41Tp54Rq', now(), 1);
+INSERT INTO order_service.user_roles (USER_ID, ROLE_ID) VALUES (1, 1);
+INSERT INTO order_service.user_roles (USER_ID, ROLE_ID) VALUES (1, 2);
+
+insert into order_service.products (ID, NAME, PRICE, DESCRIPTION, THUMBNAIL_IMAGE, MEASUREMENT_TYPE, CATEGORY, FRAGILE, created_at, enabled) 
+VALUES (1, 'P1', 100, 'THIS IS P OF ONE', 'ITS IMAGE IS GLORIES', 'QUANTITY', 'SPORT', 0, now(), 1); 
+insert into order_service.products (ID, NAME, PRICE, DESCRIPTION, THUMBNAIL_IMAGE, MEASUREMENT_TYPE, CATEGORY, FRAGILE, created_at, enabled) 
+VALUES (2, 'P2', 200, 'THIS IS P OF TWO', 'ITS IMAGE IS GLORIES', 'QUANTITY', 'HOME_AND_KITCHEN', 1, now(), 1);
+insert into order_service.products (ID, NAME, PRICE, DESCRIPTION, THUMBNAIL_IMAGE, MEASUREMENT_TYPE, CATEGORY, FRAGILE, created_at, enabled) 
+VALUES (3, 'P3', 300, 'THIS IS P OF THREE', 'ITS IMAGE IS GLORIES', 'QUANTITY', 'ELECTORICS', 0, now(), 1);
+insert into order_service.products (ID, NAME, PRICE, DESCRIPTION, THUMBNAIL_IMAGE, MEASUREMENT_TYPE, CATEGORY, FRAGILE, created_at, enabled) 
+VALUES (4, 'P4', 400, 'THIS IS P OF FOUR', 'ITS IMAGE IS GLORIES', 'QUANTITY', 'APPAREL', 1, now(), 1);
+insert into order_service.products (ID, NAME, PRICE, DESCRIPTION, THUMBNAIL_IMAGE, MEASUREMENT_TYPE, CATEGORY, FRAGILE, created_at, enabled) 
+VALUES (5, 'P5', 500, 'THIS IS P OF FIVE', 'ITS IMAGE IS GLORIES', 'QUANTITY', 'FOOD_BEVERAGE', 0, now(), 1);
+insert into order_service.products (ID, NAME, PRICE, DESCRIPTION, THUMBNAIL_IMAGE, MEASUREMENT_TYPE, CATEGORY, FRAGILE, created_at, enabled) 
+VALUES (6, 'P6', 600, 'THIS IS P OF SIX', 'ITS IMAGE IS GLORIES', 'KILOGRAM', 'FOOD_BEVERAGE', 1, now(), 1);
+insert into order_service.products (ID, NAME, PRICE, DESCRIPTION, THUMBNAIL_IMAGE, MEASUREMENT_TYPE, CATEGORY, FRAGILE, created_at, enabled) 
+VALUES (7, 'P7', 700, 'THIS IS P OF SEVEN', 'ITS IMAGE IS GLORIES', 'LITER', 'FOOD_BEVERAGE', 0, now(), 1);
+insert into order_service.products (ID, NAME, PRICE, DESCRIPTION, THUMBNAIL_IMAGE, MEASUREMENT_TYPE, CATEGORY, FRAGILE, created_at, enabled) 
+VALUES (8, 'P8', 800, 'THIS IS P OF EIGHT', 'ITS IMAGE IS GLORIES', 'METER', 'SPORT', 1, now(), 1);
+insert into order_service.products (ID, NAME, PRICE, DESCRIPTION, THUMBNAIL_IMAGE, MEASUREMENT_TYPE, CATEGORY, FRAGILE, created_at, enabled) 
+VALUES (9, 'P9', 900, 'THIS IS P OF NINE', 'ITS IMAGE IS GLORIES', 'METER', 'SPORT', 0, now(), 1);
+

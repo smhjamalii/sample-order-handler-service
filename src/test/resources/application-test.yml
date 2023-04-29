@@ -1,0 +1,38 @@
+spring:
+  sql:
+    init:
+      platform: H2
+      schema-locations:
+      - classpath:schema-h2.sql
+      data-locations:
+      - classpath:data-h2.sql      
+  datasource:    
+    url: jdbc:h2:mem:order_service;INIT=CREATE SCHEMA IF NOT EXISTS order_service;DB_CLOSE_ON_EXIT=FALSE
+    driverClassName: org.h2.Driver    
+    username: sa
+    password:
+  jpa:
+    database-platform: H2   
+    defer-datasource-initialization: true
+    hibernate:
+      ddl-auto: create-drop 
+
+server:
+  port: 8443
+  ssl:
+    enabled: true
+    key-alias: localhost
+    key-store: "classpath:localhost.keystore"
+    key-store-type: jks
+    key-store-password: localpass
+    key-password: localpass
+    
+jwt:
+  signing:
+    key: 102031510006016102031510006016102031510006016102031510006016
+
+logging:
+  level:
+    org.springframework.web: DEBUG
+    ir.welldone.appmanager: DEBUG
+    org.hibernate: DEBUG

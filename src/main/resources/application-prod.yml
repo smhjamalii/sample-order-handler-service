@@ -1,0 +1,31 @@
+spring:
+  sql:
+    init:
+      platform: MYSQL
+      data-locations:
+      - classpath:data-mysql.sql
+  datasource:
+    url: jdbc:mysql://localhost:3306/order_service
+    driverClassName: com.mysql.cj.jdbc.Driver
+    username: root
+    password: root
+  jpa:
+    database-platform: MYSQL
+    defer-datasource-initialization: true
+    hibernate:
+      ddl-auto: update     
+
+server:
+  port: 8443
+  ssl:
+    enabled: true
+    key-alias: localhost
+    key-store: "classpath:localhost.keystore"
+    key-store-type: jks
+    key-store-password: localpass
+    key-password: localpass
+    
+jwt:
+  signing:
+    key: 102031510006016102031510006016102031510006016102031510006016
+    
